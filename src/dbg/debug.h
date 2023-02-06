@@ -2,7 +2,7 @@
 #include <stdint.h>
 
 #define APP_STACK_CANARY_MAGIC 0xDEAD0031
-#define NULL ((void *)0)
+#define NULL                   ((void *) 0)
 extern unsigned int app_stack_canary;
 
 // Zemu and canary functions
