@@ -34,6 +34,11 @@ APPVERSION       = "$(APPVERSION_M).$(APPVERSION_N).$(APPVERSION_P)"
 
 ifeq ($(TARGET_NAME), TARGET_NANOX)
 ICONNAME=icons/nanox_app_rarible.gif
+else ifeq ($(TARGET_NAME), TARGET_STAX)
+ICONNAME=icons/stax_app_rarible.gif
+DEFINES += ICONGLYPH=C_stax_rarible_64px
+DEFINES += ICONBITMAP=C_stax_rarible_64px_bitmap
+GLYPH_FILES += $(ICONNAME)
 else
 ICONNAME=icons/nanos_app_rarible.gif
 endif
