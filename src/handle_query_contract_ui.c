@@ -17,7 +17,6 @@ static bool set_address_ui(ethQueryContractUI_t *msg, address_t *value) {
     return getEthAddressStringFromBinary(
         value->address,
         msg->msg + 2,  // +2 here because we've already prefixed with '0x'.
-        msg->pluginSharedRW->sha3,
         chainid);
 }
 
@@ -122,7 +121,6 @@ static void set_signature_ui(ethQueryContractUI_t *msg, context_t *context) {
     getEthAddressStringFromBinary(
         context->tx.body.mint_and_transfer.signature,
         msg->msg + 2,  // +2 here because we've already prefixed with '0x'.
-        msg->pluginSharedRW->sha3,
         chainid);
 }
 */
