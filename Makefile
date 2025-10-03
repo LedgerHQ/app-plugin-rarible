@@ -19,7 +19,7 @@ APPNAME = "Rarible"
 
 # Application version
 APPVERSION_M = 1
-APPVERSION_N = 0
+APPVERSION_N = 2
 APPVERSION_P = 0
 
 include ethereum-plugin-sdk/standard_plugin.mk
