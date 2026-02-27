@@ -132,13 +132,13 @@ typedef struct {
 } order_t;
 
 typedef struct {
-    u_int8_t len;
-    u_int8_t text[NAME_MAX_LEN];
+    uint8_t len;
+    uint8_t text[NAME_MAX_LEN];
 } name_t;
 
 typedef struct {
-    u_int8_t len;
-    u_int8_t text[SYMBOL_MAX_LEN];
+    uint8_t len;
+    uint8_t text[SYMBOL_MAX_LEN];
 } symbol_t;
 
 typedef struct {
@@ -199,7 +199,7 @@ typedef struct {
         struct {
             // For display.
             address_t to;
-            u_int8_t isApproved;
+            uint8_t isApproved;
 
         } set_approval_for_all;
 
