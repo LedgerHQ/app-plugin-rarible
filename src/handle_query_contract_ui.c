@@ -21,7 +21,7 @@ static bool set_address_ui(ethQueryContractUI_t *msg, address_t *value) {
 }
 
 // Set UI for "IsApproved" screen.
-static bool set_is_approved(ethQueryContractUI_t *msg, u_int8_t isApproved) {
+static bool set_is_approved(ethQueryContractUI_t *msg, uint8_t isApproved) {
     strlcpy(msg->title, "Approved", msg->titleLength);
 
     if (isApproved == 0) {
@@ -134,7 +134,7 @@ static bool set_royalties_ui(ethQueryContractUI_t *msg, uint16_t royalties) {
     } else if (royalties < 99) {
         snprintf(msg->msg, msg->msgLength, "0.%d%%", royalties);
     } else {
-        u_int8_t decimal = royalties % 100;
+        uint8_t decimal = royalties % 100;
         if (decimal < 9) {
             snprintf(msg->msg, msg->msgLength, "%d.0%d%%", royalties / 100, decimal);
         } else {
